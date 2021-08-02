@@ -14,18 +14,20 @@ public class Main {
                     String enWord = wordInput();
                     System.out.println("Enter encryption shift key value");
                     int enKey = scanner.nextInt();
+                    System.out.println("Encrypted text is " + new Cipher().encrypt(enWord, enKey));
                     break;
                 case 2:
                     String decWord = wordInput();
                     System.out.println("Enter decryption shift key value");
                     int decKey = scanner.nextInt();
+                    System.out.println("Encrypted text is " + new Cipher().decrypt(decWord, decKey));
                     break;
                 case 3:
                     System.out.println("Exit. Thank you for using this application.");
                     System.exit(0);
                     isRunning = false;
                 default:
-                    System.out.println("Kindly select a valid input");
+                    System.out.println("Kindly enter a valid input");
             }
         }
     }
