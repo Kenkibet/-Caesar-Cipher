@@ -20,8 +20,11 @@ public class CipherTest {
         output = new Cipher().encrypt("DESTA", 2);
         assertNotEquals(expectedOutput, output);
 
+        output = new Cipher().encrypt("`aop]", 2);
+        assertNotEquals(expectedOutput, output);
+
         output = new Cipher().encrypt("me", 2);
-        assertEquals(output, "nf");
+        assertEquals(output, "og");
     }
 
     @Test
@@ -29,11 +32,14 @@ public class CipherTest {
         String output = new Cipher().decrypt("test", 2);
         assertTrue(output instanceof String);
 
-        String expectedOutput = "YELLOW";
-        output = new Cipher().decrypt("DESTA", 2);
+        String expectedOutput = "`aop]";
+        output = new Cipher().decrypt("YELLOW", 2);
         assertNotEquals(expectedOutput, output);
 
+        output = new Cipher().decrypt("DESTA", 2);
+        assertEquals(expectedOutput, output);
+
         output = new Cipher().decrypt("me", 2);
-        assertEquals(output, "nf");
+        assertEquals(output, "kc");
     }
 }
