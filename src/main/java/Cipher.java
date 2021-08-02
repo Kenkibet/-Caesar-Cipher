@@ -1,10 +1,6 @@
 public class Cipher {
     private int Key;
     private String inputText;
-    private String uppercase = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
-    private String lowercase = "abcdefghijklmnopqrstuvwxyz";
-    private String special = "!#$%&'()*+,-./:;<=>?@[]^_`{|}~";
-    private String numbers = "0123456789";
     private String output = "";
 
     public int getKey() {
