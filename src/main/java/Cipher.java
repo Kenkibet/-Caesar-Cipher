@@ -3,13 +3,6 @@ public class Cipher {
     private String inputText;
     private String output = "";
 
-    public int getKey() {
-        return this.Key;
-    }
-    public String getInputText() {
-        return this.inputText;
-    }
-
     public String encrypt(String Statement, int Key) {
         this.inputText = Statement.toUpperCase();
         this.Key = Key;
